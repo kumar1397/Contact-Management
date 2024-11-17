@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function HomePage() {
-    const [posts, setPosts] = useState([]); // All contacts
-    const [searchQuery, setSearchQuery] = useState(""); // Search input
-    const [filteredPosts, setFilteredPosts] = useState([]); // Filtered contacts
+    const [posts, setPosts] = useState([]); 
+    const [searchQuery, setSearchQuery] = useState(""); 
+    const [filteredPosts, setFilteredPosts] = useState([]); 
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -14,7 +14,7 @@ export default function HomePage() {
                 const data = await response.json();
                 const newdata = data.data;
                 setPosts(newdata);
-                setFilteredPosts(newdata); // Initially display all contacts
+                setFilteredPosts(newdata); 
             } catch (error) {
                 console.log("Error fetching products:", error);
             }
@@ -23,7 +23,7 @@ export default function HomePage() {
         fetchProducts();
     }, []);
 
-    // Filter posts based on the search query
+  
     useEffect(() => {
         const filtered = posts.filter(
             (post) =>
