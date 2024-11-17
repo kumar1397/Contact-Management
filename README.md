@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# **Contact Management App with Next.js**
 
-First, run the development server:
+## **Overview**
+The **Contact Management App** is a full-stack application for managing contact information. It demonstrates CRUD (Create, Read, Update, Delete) operations with a clean and responsive interface.  
+- **Next.js**: Preferred for its built-in SSR, routing, and performance optimizations.  
+- **Tailwind CSS**: Enables fast, consistent styling with its utility-first approach.  
+- **MongoDB**: Chosen for its flexibility, scalability, and JSON-like dynamic data handling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Features**
+- Add, update, view, and delete contact details.  
+- Responsive design for seamless interaction across devices.  
+- Dynamic routing and server-side rendering for enhanced performance and SEO.  
+- Integration with a backend API for efficient data handling.  
+- Persistent data storage using MongoDB.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Technology Stack**
+- **Frontend**: Next.js, Tailwind CSS  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## **Setup Instructions**
+### **Frontend**
+1. Open the terminal and navigate to the project root.  
+2. Run `npm install` to install dependencies.  
+3. Start the development server with `npm run dev`.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Backend**
+1. Open the terminal and navigate to the `server` directory.  
+2. Run `npm install` to install dependencies.  
+3. Start the server with `npm run dev`.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Database Schema Script**
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+{
+  "collection": "contacts",
+  "fields": {
+    "fname": "string",
+    "lname": "string",
+    "phone": "string",
+    "email": "string",
+    "company": "string",
+    "jobtitle": "string"
+  }
+}
